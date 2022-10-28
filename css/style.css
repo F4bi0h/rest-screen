@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background: linear-gradient(45deg,#029642, #302682);
+}
+
+.ball {
+    box-shadow: 0px 0px 8px gray;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    animation: showBall;
+    animation-duration: 400ms;
+}
+
+@keyframes showBall {
+    from {
+        opacity: 1;
+    } from {
+        opacity: 0;
+    }
+}
