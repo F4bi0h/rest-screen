@@ -4,18 +4,27 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #029642;
+    --second-color: #302682;
+    --shadow-color: rgb(187, 187, 187);
+}
+
 html, body {
     height: 100%;
     background: linear-gradient(45deg,#029642, #302682);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .ball {
-    box-shadow: 0px 0px 8px gray;
+    box-shadow: 0px 0px 8px var(--shadow-color);
     width: 30px;
     height: 30px;
     border-radius: 50%;
     animation: showBall;
-    animation-duration: 400ms;
+    animation-duration: 750ms;
 }
 
 @keyframes showBall {
@@ -24,4 +33,34 @@ html, body {
     } from {
         opacity: 0;
     }
+}
+
+
+/* 
+    CLOCK
+*/
+.clockArea {
+    background: var(--primary-color);
+    box-shadow: 0 0 10px var(--shadow-color);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 600px;
+    height: 300px;
+}
+
+.clockArea div {
+    background: var(--second-color);
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--second-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 60px;
+    margin: 5px;
+    width: 30%;
+    height: 60%;
 }

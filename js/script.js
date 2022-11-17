@@ -41,9 +41,18 @@ function randomColor() {
     }
 }
 
-function randomTime() {
-    setInterval(randomBall, 500);
+function getHours() {
+    let date = new Date();
+
+    document.querySelector('.hours').innerHTML = date.getHours();
+    document.querySelector('.minutes').innerHTML = date.getMinutes();
+    document.querySelector('.seconds').innerHTML = date.getSeconds();
 }
 
-randomTime();
+window.addEventListener('load', () => {
+    setInterval(getHours, 1000);
+    setInterval(randomBall, 1000);
+});
+
+
 randomSize();
